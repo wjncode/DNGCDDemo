@@ -24,6 +24,7 @@ let concurrent = DispatchQueue(label: "concurrentqueue1",
                                autoreleaseFrequency: .workItem,
                                target: nil)
 
+
 /*:
  ## 参数说明
  1. label 队列名称
@@ -65,9 +66,9 @@ DispatchQueue.global(qos: .default).sync {
     print("全局队列中执行同步操作")
 }
 
-DispatchQueue.main.sync {
-    print("主线程中执行同步操作, 会引起死锁 程序报错")
-}
+//DispatchQueue.main.sync {
+//    print("主线程中执行同步操作, 会引起死锁 程序报错")
+//}
 
 // 暂停/继续队列
 let concurrentQueue = DispatchQueue(label: "concurrentQueue2",
